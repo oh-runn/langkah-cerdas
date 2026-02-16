@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Pengaturan</title>
+</head>
+<body>
+
+<h1>Halaman Pengaturan 🔧</h1>
+<p>Selamat datang admin!</p>
+
+<button onclick="logout()">Logout</button>
+
+<script>
+// cek login
+if(localStorage.getItem("login") !== "true"){
+alert("Harus login dulu!");
+window.location.href="login.html";
+}
+
+function logout(){
+localStorage.removeItem("login");
+window.location.href="login.html";
+}
+</script>
+
+</body>
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Login</title>
+<style>
+body{
+font-family:Poppins,Arial;
+background:#f4f7ff;
+display:flex;
+justify-content:center;
+align-items:center;
+height:100vh;
+}
+.box{
+background:white;
+padding:30px;
+border-radius:12px;
+box-shadow:0 10px 25px rgba(0,0,0,0.1);
+text-align:center;
+}
+input{
+display:block;
+margin:10px auto;
+padding:10px;
+width:200px;
+}
+button{
+background:#5b7cff;
+color:white;
+border:none;
+padding:10px 20px;
+border-radius:6px;
+cursor:pointer;
+}
+</style>
+</head>
+<body>
+
+<div class="box">
+<h2>Login Admin</h2>
+<input id="user" placeholder="Username">
+<input id="pass" type="password" placeholder="Password">
+<button onclick="login()">Login</button>
+</div>
+
+<script>
+function login(){
+let u = document.getElementById("user").value;
+let p = document.getElementById("pass").value;
+
+if(u === "admin" && p === "123"){
+localStorage.setItem("login","true");
+window.location.href="pengaturan.html";
+}else{
+alert("Login salah!");
+}
+}
+</script>
+
+</body>
+</html>
