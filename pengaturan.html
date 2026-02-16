@@ -12,7 +12,20 @@
 
 <script>
 // cek login
-if(localStorage.getItem("login") !== "true"){
+<script>
+const login = localStorage.getItem("login");
+
+if (!login) {
+  alert("Harus login dulu!");
+  window.location.href = "login.html";
+}
+
+function logout(){
+  localStorage.removeItem("login");
+  window.location.href = "login.html";
+}
+</script>
+
 alert("Harus login dulu!");
 window.location.href="login.html";
 }
@@ -25,3 +38,4 @@ window.location.href="login.html";
 
 </body>
 </html>
+
